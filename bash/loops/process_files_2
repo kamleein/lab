@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# List all dot files
+if [[ -z "$1" || "$1" == "--help" || "$1" == "-h" ]]; then
+    echo "Usage: $0 <directory_path>"
+fi
+
+shopt -s dotglob nullglob 
+
+# Changing the below line as "$1"* will display all the files
+all_files=("$1".*)
+
+for file in "${all_files[@]}"; do
+    # Hndles spaces, hidden files, and empty directories
+    # without this, a file name 'first last' will be considered as
+    # two files (first and last)
+    [[ -f "$file" ]] || continue
+    echo "$file"
+done
+#echo "Number of files: ${#all_files[@]}"
