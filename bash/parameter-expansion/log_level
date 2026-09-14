@@ -1,0 +1,7 @@
+#!/bin/bash
+name="${1:-world}"
+log_level="${LOG_LEVEL:-info}"
+echo "Hello, $name (log: $log_level)"
+
+# Execute it as ./log_level to trigger the default.
+# Execute it as ./log_level Kamal to pass Kamal as the first parameter. i.e. $1=Kamal.

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ -z "$1" || "$1" == "--help" || "$1" == "-h" ]]; then
+    echo "Usage: $0 <File Or Direcetory name>"
+    exit 1;
+fi
+
+if [[ -f "$1" ]]; then
+	echo "It is a file"
+elif [[ -d "$1" ]]; then
+	echo "It is a directory"
+else
+	echo "It is not found"
+fi

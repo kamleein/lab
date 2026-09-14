@@ -1,0 +1,5 @@
+$? Exit code of last command
+$$Current shell’s process ID
+$USER Current username
+$HOME Home directory
+$PWD Current directory
