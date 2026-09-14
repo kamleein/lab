@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [[ -z "$1" || "$1" == "--help" || "$1" == "-h" ]]; then
+    echo "Usage: $0 {apple|banana|kiwi}"
+fi
+
+case $1 in
+    apple)
+        echo "Apple's colour is red/green"
+        ;;
+    banana)
+        echo "Banana's colour is yellow"
+        ;;
+    kiwi)
+        echo "Kiwi's colour is green/brown"
+        ;;
+    *)
+        echo "Unknown fruit"
+        exit 1
+        ;;
+esac
