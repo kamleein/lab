@@ -21,7 +21,7 @@ spec:
         ports:
           - containerPort: 9000
         volumeMounts:
-        - mountPath: "/app/data"
+        - mountPath: /app/data
           name: mypd
       volumes:
         - name: mypd
