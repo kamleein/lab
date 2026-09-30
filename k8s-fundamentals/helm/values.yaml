@@ -1,0 +1,5 @@
+replicaCount: 2
+podLabels:
+  hello: world
+env:
+  TZ: "Australia/Melbourne"

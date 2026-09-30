@@ -1,0 +1,12 @@
+grafana:
+  # Administrator credentials when not using an existing secret (see below)
+  adminUser: admin
+  # adminPassword: strongpassword   <-- Make sure this remains commented out or deleted
+
+  # Use an existing secret for the admin user.
+  admin:
+    ## Name of the secret. Can be templated.
+    existingSecret: "grafana-admin-credentials"
+    userKey: admin-user
+    passwordKey: admin-password
+
